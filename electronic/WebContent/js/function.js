@@ -141,6 +141,7 @@ function Check(obj) {
 	//console.log($(obj).val());
 	switch($(obj).attr('name')) {
 		case "userName":
+			console.log(obj.value);
 			if(obj.value == "") {
 				msgBox.html('用户名不能为空');
 				msgBox.addClass('error');
@@ -169,55 +170,50 @@ function Check(obj) {
 			}
 		
 			break;
-		case "passWord":
-			if(obj.value == "") {
-				msgBox.html('用户名密码不能为空');
-				msgBox.addClass('error');
-				flagg=false;
-			}else{
-				flagg=true;
-			}
-			break;
-		case "repassWord":
-			if(obj.value == "") {
-				msgBox.html('用户名确认密码不能为空');
-				msgBox.addClass('error');
-				flagg=false;
-			}else if($(obj).val() !=$('input[name="passWord"]').val() ){
-				msgBox.html('两次输入的密码不一致');
-				msgBox.addClass('error');
-				flagg=false;
-			}else{
-				flagg=true;
-			}
-			break;
-		case "veryCode":
-			var  numshow = $(obj).next().next();
+		case "code":
+			 var format = /^(([1][1-5])|([2][1-3])|([3][1-7])|([4][1-6])|([5][0-4])|([6][1-5])|([7][1])|([8][1-2]))\d{4}(([1][9]\d{2})|([2]\d{3}))(([0][1-9])|([1][0-2]))(([0][1-9])|([1-2][0-9])|([3][0-1]))\d{3}[0-9xX]$/;
+//			console.log(obj.value);
+//			console.log(format.test(obj.value));
+			 if(obj.value == ""){
+				 msgBox.html('身份证不能为空！');
+					msgBox.addClass('error');
+					flagg=false;
+			 }else if(!obj.value.match(format)){
+				 msgBox.html('身份证输入错误！');
+					msgBox.addClass('error');
+					flagg=false;
+			 }else{
+					msgBox.html().removeClass('error');
+					flagg=true;
+				}
+			 break;
 			
-			if(obj.value == "") {
-				numshow.html('验证码不能为空');
-				numshow.addClass('error');
-				flag=false;
-			}else {
-			
-				var url="checkusernum?num="+encodeURI($(obj).val())+"&"+new Date().getTime();
-				
-				$.get(url, function(data){
-					if(data=="false") {
-						numshow.html('验证码输入有误');
-						numshow.addClass('error');
+		case "email":
+			var isemail=/^\w+([-\.]\w+)*@\w+([\.-]\w+)*\.\w{2,4}$/;
+			if(obj.value ==''){
+				 msgBox.html('邮箱不能为空');
+				 msgBox.addClass('error');
+					flagg=false;
+				 }else if(!obj.value.match(isemail)){
+					 msgBox.html('邮箱格式错误！');
+						msgBox.addClass('error');
 						flagg=false;
-					}else{
-						numshow.html().removeClass('error');
-						flagg=true;
-					}
-					
-				});
-			
-			}
+				 }else{msgBox.html().removeClass('error');
+					flagg=true;}
 			break;
-			
-	
+		case "mobile":
+			var ismobile=/^1[^12]\d{9}$/;
+			if(obj.value ==''){
+				 msgBox.html('电话不能为空');
+				 msgBox.addClass('error');
+					flagg=false;
+				 }else if(!obj.value.match(ismobile)){
+					 msgBox.html('手输入错误！');
+						msgBox.addClass('error');
+						flagg=false;
+				 }else{msgBox.html().removeClass('error');
+					flagg=true;}
+			break;
 	}
 	
 }
