@@ -32,8 +32,8 @@
         </div>
         <div class="top-info-wrap">
             <ul class="top-info-list clearfix">
-                <li><a href="#">管理员: ${name.USER_ID }</a></li>
-                <li><a href="admin_touserupdate?id=${name.USER_ID }&cpage=${cpage}">修改密码</a></li>
+                <li><a href="#">管理员:${user.USER_ID }</a></li>
+                <li><a href="admin_touserupdate?id=${user.USER_ID }&cpage=${cpage}">修改密码</a></li>
                 <li><a href="/electronic/manage/admin_logout">退出</a></li>
             </ul>
         </div>
