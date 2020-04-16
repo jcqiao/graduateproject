@@ -35,10 +35,9 @@
         	<input style="width:15px;height:15px; margin-left:15px;" type="radio" name="sex" value="F" >女
         	
         	</p>
-        <p><input type="text" name="birthday" value="" onfocus="c.show(this)" placeholder="请输入出生日期"><span></span></p>
-        <p><input type="text" name="email" value="" placeholder="请输入邮箱"><span></span></p>
-        <p><input type="text" name="mobile" value="" placeholder="请输入电话"><span></span></p>
-        <p><input type="text" name="address" value="" placeholder="地址"><span></span></p>
+       
+        <p><input type="text" name="mobile" value=""  onfocus="FocusItem(this)" onblur="CheckItem(this)"  placeholder="请输入电话"><span></span></p>
+        
         <p ><input class="code" type="text"  onfocus="FocusItem(this)" onblur="CheckItem(this)" name="veryCode" value="" placeholder="验证码">
         <!-- src getcode定向到验证码 -->
         	<img src="getcode" alt="看不清，换一张" onclick="change(this)"><span></span></p>

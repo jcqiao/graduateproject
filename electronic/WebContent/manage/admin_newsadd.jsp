@@ -53,7 +53,7 @@
                            <tr>
                                 <th><i class="require-red">*</i>添加时间：</th>
                                 <td>
-                                    <input class="common-text required" id="title" name="time" size="50" value="" type="text">
+                                    <input class="common-text required" onfocus="c.show(this)" id="title" name="time" size="50" value="" type="text">
                                 </td>
                             </tr>
                             <tr>

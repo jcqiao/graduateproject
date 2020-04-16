@@ -40,7 +40,7 @@
         <div class="result-wrap">
             <div class="result-content">
             <!-- 更改  去manage-->
-                <form action="/monkey/user_dousersignup" method="post" id="myform" name="myform" >
+                <form action="/electronic/user_dousersignup" method="post" id="myform" name="myform" >
                     <table class="insert-tab" width="100%">
                         <tbody>
                             <tr>
@@ -93,7 +93,17 @@
                                     <input class="common-text required" id="title" name="address" size="50" value="" type="text">
                                 </td>
                             </tr>
-                            
+                               <tr>
+                                <th><i class="require-red">*</i>参赛项目：</th>
+                                <td>
+                                   <select id="selec" name="compete">
+                                   		<option value="音频信号分析仪">音频信号分析仪</option>
+                                   		<option value="无线识别装置">无线识别装置</option>
+                                   		<option value="数字示波器">数字示波器</option>
+                                   		<option value="开关稳压电源">开关稳压电源</option>
+                                   </select>
+                                </td>
+                            </tr>
                            
                             <tr>
                                 <th></th>

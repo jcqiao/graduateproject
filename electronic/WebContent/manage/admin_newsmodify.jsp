@@ -91,8 +91,25 @@
     </div>
     <!--/main-->
 </div>
+<script>
+var textarea = document.getElementsByTagName("textarea");
+console.log(textarea.length);
+for(var i = 0; i<textarea.length; i++){
+//	textarea[i].contentText.toString();
+console.log(textarea[i].textContent);
+var str = textarea[i].textContent;
+	console.log(typeof str);
+	console.log(trim(str));
+}
+function trim(str){
+	var reg = /(^\s*) | (\s*$)/g;
+	return str.replace(reg,'')
+}
+
+</script>
    <script src="../js/jquery-1.12.4.min.js"></script>
 <script src="../js/calendar.js"></script>
 <script src="../js/function.js"></script>
+
 </body>
 </html>

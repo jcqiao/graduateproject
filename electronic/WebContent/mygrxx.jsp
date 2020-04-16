@@ -41,7 +41,7 @@
                 <div class="xx"><h3 class="clearfix"><strong class="fl">基础资料</strong><a href="toyuserupdate?id=${name.USER_ID }" class="fr" id="edit1">编辑</a>
                 </h3>
                     <div>姓名：${name.USER_NAME}</div>
-                    <div>生日：${name.USER_BIRTHDAY }</div>
+                    
                     <div>性别：${name.USER_SEX=='T'?'男':'女'}</div>
                   	<div>电话：${name.USER_MOBILE }</div>
                 </div>

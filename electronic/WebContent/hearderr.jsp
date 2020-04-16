@@ -18,8 +18,7 @@
                         <a href="manage/admin_index.jsp">进入后台</a>
             </c:if>
             </p>
-               <!--  <form action="#" method="get" class="fl"><input type="text" placeholder="热门搜索：干花花瓶"/><input
-                        type="button"/></form> -->
+               
                 <div class="btn fl clearfix"><a href="mygxin.jsp"><img src="img/grzx.png"/></a><a href="#" class="er1"><img
                         src="img/ewm.png"/></a>
                         <c:if test="${isLogin == 1}">
@@ -33,22 +32,22 @@
             <li><a href="index.jsp">首页</a></li>
             <li><a href="#">竞赛新闻介绍</a>
                 <div class="sList">
-                    <div class="wrapper  clearfix"><a href="/monkey/admin_donewselect">
+                    <div class="wrapper  clearfix"><a href="/electronic/admin_donewselect">
                         <dl>
                             <dt><img style="height:184px;" src="img/news.jpg"/></dt>
                             <dd>竞赛简介</dd>
                         </dl>
-                    </a><a href="/monkey/admin_donewbulletin">
+                    </a><a href="/electronic/admin_donewbulletin">
                         <dl>
                             <dt><img style="height:184px;" src="img/bulletin.jpg"/></dt>
                             <dd>竞赛公告</dd>
                         </dl>
-                    </a><a href="/monkey/admin_donewcontent">
+                    </a><a href="/electronic/admin_donewcontent">
                         <dl>
                             <dt><img style="height:184px;" src="img/content.jpg"/></dt>
                             <dd>竞赛内容</dd>
                         </dl>
-                    </a><a href="/monkey/admin_donewinfo">
+                    </a><a href="/electronic/admin_donewinfo">
                         <dl>
                             <dt><img style="height:184px;" src="img/info.jpg"/></dt>
                             <dd>报名须知</dd>

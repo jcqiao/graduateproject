@@ -12,18 +12,15 @@
 <body><!------------------------------head------------------------------>
 <div class="head ding">
     <div class="wrapper clearfix">
-        <div class="clearfix" id="top"><h1 class="fl"><a href="index.html"><img src="img/logo.png"/></a></h1>
+        <div class="clearfix" id="top"><h1 class="fl"><a href="index.jsp"><img src="img/logo.png"/></a></h1>
             <div class="fr clearfix" id="top1"><p class="fl"><a href="#" id="login">登录</a><a href="#" id="reg">注册</a>
             </p>
-                <form action="#" method="get" class="fl"><input type="text" placeholder="搜索"/><input type="button"/>
-                </form>
-                <div class="btn fl clearfix"><a href="mygxin.html"><img src="img/grzx.png"/></a><a href="#" class="er1"><img
-                        src="img/ewm.png"/></a><a href="cart.html"><img src="img/gwc.png"/></a>
-                    <p><a href="#"><img src="img/smewm.png"/></a></p></div>
+                <div class="btn fl clearfix"><a href="mygxin.jsp"><img src="img/grzx.png"/></a>
+                   </div>
             </div>
         </div>
         <ul class="clearfix" id="bott">
-            <li><a href="index.html">首页</a></li>
+            <li><a href="index.jsp">首页</a></li>
             <li><a href="#">所有商品</a>
                 <div class="sList">
                     <div class="wrapper  clearfix"><a href="paint.html">
@@ -96,7 +93,7 @@
             <div class="tx clearfix">
                 <div class="fl clearfix"><a href="#" class="fl"><img src="img/tx.png"/></a>
                     <p class="fl"><span>${name.USER_NAME }</span><a href="mygrxx.jsp">修改个人信息></a></p></div>
-                <div class="fr">绑定邮箱：${name.USER_EMAIL }</div>
+                
             </div>
            <!--  <div class="bott">
                 <div class="clearfix"><a href="#" class="fl"><img src="img/gxin1.jpg"/></a>

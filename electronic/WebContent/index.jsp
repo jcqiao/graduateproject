@@ -5,7 +5,7 @@
 <html>
 <head lang="en">
     <meta charset="utf-8"/>
-    <title>最家</title>
+    <title>电子竞赛</title>
     <link rel="stylesheet" type="text/css" href="css/public.css"/>
     <link rel="stylesheet" type="text/css" href="css/index.css"/>
    	<style>
@@ -39,15 +39,15 @@
 <div class="news">
     <div class="wrapper"><h2><img src="img/ih1.jpg"/></h2>
         <div class="top clearfix ">
-        <div class="contest"><h3>竞赛简介</h3><a href="/monkey/admin_donewselect"><img src="img/news.jpg"/>
+        <div class="contest"><h3>竞赛简介</h3><a href="/electronic/admin_donewselect"><img src="img/news.jpg"/>
            <p>竞赛简介</p></a>
             </div>
         
             
-            <div class="contest"><h3>竞赛公告</h3> <a href="/monkey/admin_donewbulletin"><img style="width:400px;height:284px;"  src="img/bulletin.jpg"/><p>竞赛公告</p></a></div>
-           <div class="contest"><h3>竞赛内容</h3> <a href="/monkey/admin_donewcontent"><img style="width:600px;" src="img/content.jpg"/>
+            <div class="contest"><h3>竞赛公告</h3> <a href="/electronic/admin_donewbulletin"><img style="width:400px;height:284px;"  src="img/bulletin.jpg"/><p>竞赛公告</p></a></div>
+           <div class="contest"><h3>竞赛内容</h3> <a href="/electronic/admin_donewcontent"><img style="width:600px;" src="img/content.jpg"/>
             <p>竞赛内容</p></a></div>
-             <div class="contest"><h3>报名须知</h3><a href="/monkey/admin_donewinfo"><img style="width:400px;height:284px;" src="img/info.jpg"/>
+             <div class="contest"><h3>报名须知</h3><a href="/electronic/admin_donewinfo"><img style="width:400px;height:284px;" src="img/info.jpg"/>
             <p></p></a></div>
             </div>
            
@@ -93,7 +93,7 @@
     <!--footer-->
 <div class="footer">
  
-    <p class="dibu">monkey 电子竞赛平台&copy;2020-2020公司版权所有 京ICP备080100-44备0000111000号<br/>
+    <p class="dibu">electronic 电子竞赛平台&copy;2020-2020公司版权所有 京ICP备080100-44备0000111000号<br/>
         违法和不良信息举报电话：400-800-8200，本网站所列数据，除特殊说明，所有数据均出自我司实验室测试</p></div>
 <script src="js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/public.js" type="text/javascript" charset="utf-8"></script>
