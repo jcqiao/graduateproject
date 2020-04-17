@@ -18,7 +18,8 @@
                         <a href="manage/admin_index.jsp">进入后台</a>
             </c:if>
             </p>
-               
+               <!--  <form action="#" method="get" class="fl"><input type="text" placeholder="热门搜索：干花花瓶"/><input
+                        type="button"/></form> -->
                 <div class="btn fl clearfix"><a href="mygxin.jsp"><img src="img/grzx.png"/></a><a href="#" class="er1"><img
                         src="img/ewm.png"/></a>
                         <c:if test="${isLogin == 1}">
@@ -32,7 +33,7 @@
             <li><a href="index.jsp">首页</a></li>
             <li><a href="#">竞赛新闻介绍</a>
                 <div class="sList">
-                    <div class="wrapper  clearfix"><a href="/electronic/admin_donewselect">
+                    <div class="wrapper  clearfix"><a href="/electronic/admin_donewslook">
                         <dl>
                             <dt><img style="height:184px;" src="img/news.jpg"/></dt>
                             <dd>竞赛简介</dd>

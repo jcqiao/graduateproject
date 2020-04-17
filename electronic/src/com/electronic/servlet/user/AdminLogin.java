@@ -48,10 +48,10 @@ public class AdminLogin extends HttpServlet {
 				//后台标记位isAdminLogin
 				session.setAttribute("isAdminLogin", "1");
 			//	System.out.println(userName + "##"+passWord);
-				response.sendRedirect("/monkey/manage/admin_index.jsp");
+				response.sendRedirect("/electronic/manage/admin_index.jsp");
 			}else{
 				
-				response.sendRedirect("/monkey/index.jsp");
+				response.sendRedirect("/electronic/index.jsp");
 			}
 	
 		

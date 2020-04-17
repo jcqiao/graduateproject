@@ -21,7 +21,7 @@
 <div style="width:80%;margin-left:144px;">
  <h1 style="width:100%;height:50px;text-align:center;font-size:30px;margin-bottom:50px;margin-top:15px;background-color:#0066CC;">${news.NEWS_TITLE}</h1>
 <section style="border:2px solid #ddd;width:100%;height:1000px;">
-<p style="width:80%;margin-left:116px;text-indent:2em;line-height: 40px;font-size:1.71em;">${news.NEWS_INTRO }</p>
+<p style="width:80%;margin-left:116px;text-indent:2em;line-height: 40px;font-size:1.71em;">${news.NEWS_CONTENT }</p>
 </section>
 <div class="footer">
  
