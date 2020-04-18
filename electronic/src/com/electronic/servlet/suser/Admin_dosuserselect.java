@@ -19,6 +19,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.electronic.entity.ELECTRONIC_SUSER;
+//import com.electronic.service.ELECTRONIC_SUSERDao;
 import com.electronic.service.ELECTRONIC_SUSERDao;
 
 
@@ -48,6 +49,7 @@ public class Admin_dosuserselect extends HttpServlet {
 		//selectall返回所有用户对象 使用列表接收 也就是用户实体类型
 		//分页跟查询都在selectall执行 查询在全选择完进行查询 where 字段 %keywoerd%
 		ArrayList<ELECTRONIC_SUSER>  list = ELECTRONIC_SUSERDao.selectAll(cpage,count,keyword);
+		System.out.println(list);
 		//放到请求对象域里
 		request.setAttribute("userlist", list);
 		request.setAttribute("tsum", arr[0]);

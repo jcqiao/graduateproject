@@ -10,7 +10,7 @@
         </div>
         <div class="result-wrap">
             <div class="result-content">
-                <form action="/electronic/manage/admin_dosuseradd" method="post" id="myform" name="myform" >
+                <form action="/electronic/manage/admin_dosuseradd" enctype="multipart/form-data" method="post" id="myform" name="myform" >
                     <table class="insert-tab" width="100%">
                         <tbody>
                             <tr>
@@ -77,7 +77,12 @@
                                 </td>
                             </tr>
                             
-                           
+                              <tr>
+                                <th><i class="require-red">*</i>上传文件：</th>
+                                <td>
+                                    <input class="common-text required" id="title" name="file" size="50" value="" type="file">
+                                </td>
+                            </tr>
                             <tr>
                                 <th></th>
                                 <td>

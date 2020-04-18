@@ -13,7 +13,7 @@ import com.electronic.entity.ELECTRONIC_SUSER;
 
 public class ELECTRONIC_SUSERDao {
 	public static int insert(ELECTRONIC_SUSER uu) {
-		String sql = "insert into ELECTRONIC_SUSER values(?,?,?,DATE_FORMAT(?,'%Y-%m-%d'),?,?,?,?,?,?)";
+		String sql = "insert into ELECTRONIC_SUSER values(?,?,?,DATE_FORMAT(?,'%Y-%m-%d'),?,?,?,?,?,?,?)";
 		Object[] params = {
 				uu.getUSER_ID(),
 				uu.getUSER_NAME(),
@@ -25,13 +25,14 @@ public class ELECTRONIC_SUSERDao {
 				uu.getUSER_MOBILE(),
 				uu.getUSER_ADDRESS(),
 				uu.getUSER_STATUS(),
-                uu.getUSER_COMPETE()
+                uu.getUSER_COMPETE(),
+                uu.getUSER_FILENAME()
 				} ;
 		return Basedao.execuIUD(sql, params);
 	}
 	public static int update(ELECTRONIC_SUSER u) {
 		String sql = "update ELECTRONIC_SUSER set USER_NAME=?,USER_SEX=?,USER_BIRTHDAY=DATE_FORMAT(?,'%Y-%m-%d')"
-				+ ",USER_IDENITY_CODE=?,USER_EMAIL=?,USER_MOBILE=?,USER_ADDRESS=?,USER_STATUS=? ,USER_COMPETE=? where USER_ID=?";
+				+ ",USER_IDENITY_CODE=?,USER_EMAIL=?,USER_MOBILE=?,USER_ADDRESS=?,USER_STATUS=? ,USER_COMPETE=?, USER_FILENAME where USER_ID=?";
 		
 		//把页面数据拿到
 		Object[] params = {
@@ -46,6 +47,7 @@ public class ELECTRONIC_SUSERDao {
 				u.getUSER_ADDRESS(),
 				u.getUSER_STATUS(),
                 u.getUSER_COMPETE(),
+                u.getUSER_FILENAME(),
 				u.getUSER_ID()
 				} ;
 		return Basedao.execuIUD(sql, params);
@@ -56,7 +58,7 @@ public class ELECTRONIC_SUSERDao {
 		Object[] params = {id};
 		return Basedao.execuIUD(sql, params);
 	}
-	
+
 	public static int selectByName(String id) {
 		int count = 0;
 		Connection conn = Basedao.getconn();
@@ -191,7 +193,8 @@ public class ELECTRONIC_SUSERDao {
 						rs.getString("USER_MOBILE"),
 						rs.getString("USER_ADDRESS"),
 						rs.getInt("USER_STATUS"),
-                        rs.getString("USER_COMPETE")
+                        rs.getString("USER_COMPETE"),
+                        rs.getString("USER_FILENAME")
 						);
 				list.add(u);
 			}
@@ -237,7 +240,8 @@ public class ELECTRONIC_SUSERDao {
 						rs.getString("USER_MOBILE"),
 						rs.getString("USER_ADDRESS"),
 						rs.getInt("USER_STATUS"),
-                        rs.getString("USER_COMPETE")
+                        rs.getString("USER_COMPETE"),
+                        rs.getString("USER_FILENAME")
 						);
 				//因为只有一条记录所以不用添加到列表
 			}
@@ -321,7 +325,8 @@ public class ELECTRONIC_SUSERDao {
 							 	rs.getString("USER_MOBILE"),
 							 	rs.getString("USER_ADDRESS"),
 							 	rs.getInt("USER_STATUS"),
-							 	rs.getString("USER_COMPETE")
+							 	rs.getString("USER_COMPETE"),
+							 	rs.getString("USER_FILENAME")
 				
 							 );
 					 

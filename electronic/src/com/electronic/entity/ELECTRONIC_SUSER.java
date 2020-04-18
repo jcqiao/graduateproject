@@ -14,12 +14,14 @@ public class ELECTRONIC_SUSER {
 		private String USER_ADDRESS;
 		private int USER_STATUS;
 		private String USER_COMPETE;
-		public ELECTRONIC_SUSER(String uSER_ID, String uSER_NAME,  String uSER_SEX, String uSER_BIRTHDAY,
-				String uSER_IDENITY_CODE, String uSER_EMAIL, String uSER_MOBILE, String uSER_ADDRESS, int uSER_STATUS, String uSER_COMPETE) {
+		private String USER_FILENAME;
+	
+		public ELECTRONIC_SUSER(String uSER_ID, String uSER_NAME, String uSER_SEX, String uSER_BIRTHDAY,
+				String uSER_IDENITY_CODE, String uSER_EMAIL, String uSER_MOBILE, String uSER_ADDRESS, int uSER_STATUS,
+				String uSER_COMPETE, String uSER_FILENAME) {
 			super();
 			USER_ID = uSER_ID;
 			USER_NAME = uSER_NAME;
-			//USER_PASSWORD = uSER_PASSWORD;
 			USER_SEX = uSER_SEX;
 			USER_BIRTHDAY = uSER_BIRTHDAY;
 			USER_IDENITY_CODE = uSER_IDENITY_CODE;
@@ -27,7 +29,8 @@ public class ELECTRONIC_SUSER {
 			USER_MOBILE = uSER_MOBILE;
 			USER_ADDRESS = uSER_ADDRESS;
 			USER_STATUS = uSER_STATUS;
-			setUSER_COMPETE(uSER_COMPETE);
+			USER_COMPETE = uSER_COMPETE;
+			USER_FILENAME = uSER_FILENAME;
 		}
 		public String getUSER_ID() {
 			return USER_ID;
@@ -94,6 +97,12 @@ public class ELECTRONIC_SUSER {
 		}
 		public void setUSER_COMPETE(String uSER_COMPETE) {
 			USER_COMPETE = uSER_COMPETE;
+		}
+		public String getUSER_FILENAME() {
+			return USER_FILENAME;
+		}
+		public void setUSER_FILENAME(String uSER_FILENAME) {
+			USER_FILENAME = uSER_FILENAME;
 		}
 		
 		

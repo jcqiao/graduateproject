@@ -46,6 +46,7 @@
                             <th>EMAIL</th>
                             <th>手机</th>
                             <th>参赛题目</th>
+                             <th>文件</th>
                             <th>操作</th>
                             
                         </tr>
@@ -60,6 +61,7 @@
 	                               <td>  ${u.USER_EMAIL } </td>
 	                                <td>  ${u.USER_MOBILE } </td>
                                      <td>  ${u.USER_COMPETE } </td>
+                                      <td> <a href="../file/suser/${u.USER_FILENAME }">${u.USER_FILENAME }</a> </td>
 	                          
 	                            <td>
 	                            <!-- 修改传id参数 之前设置了分页 比如第6页 那还跳回第6页增加参数 当前页-->

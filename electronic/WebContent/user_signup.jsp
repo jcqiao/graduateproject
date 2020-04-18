@@ -40,7 +40,10 @@
         <div class="result-wrap">
             <div class="result-content">
             <!-- 更改  去manage-->
-                <form action="/electronic/user_dousersignup" method="post" id="myform" name="myform" >
+               <form action="" method="post" enctype="multipart/form-data">
+               		
+               </form>
+                <form action="/electronic/user_dousersignup" method="post" enctype="multipart/form-data" id="myform" name="myform" >
                     <table class="insert-tab" width="100%">
                         <tbody>
                             <tr>
@@ -58,7 +61,7 @@
                              <tr>
                                 <th><i class="require-red">*</i>身份证号：</th>
                                 <td>
-                                    <input class="common-text required" id="title" onfocus="FocusItem(this)" name="code" size="50" value="" type="text"><span></span>
+                                    <input class="common-text required" id="title" onfocus="FocusItem(this)" onblur="Check(this)" name="code" size="50" value="" type="text"><span></span>
                                 </td>
                             </tr>
                            
@@ -78,13 +81,13 @@
                             <tr>
                                 <th><i class="require-red">*</i>电子邮箱：</th>
                                 <td>
-                                    <input class="common-text required" id="title" name="email" size="50" value="" type="text">
+                                    <input class="common-text required"  onfocus="FocusItem(this)" onblur="Check(this)" id="title" name="email" size="50" value="" type="text"><span></span>
                                 </td>
                             </tr>
                             <tr>
                                 <th><i class="require-red">*</i>手机号码：</th>
                                 <td>
-                                    <input class="common-text required" id="title" name="mobile" size="50" value="" type="text">
+                                    <input class="common-text required"  onfocus="FocusItem(this)" onblur="Check(this)" id="title" name="mobile" size="50" value="" type="text"><span></span>
                                 </td>
                             </tr>
                             <tr>
@@ -104,7 +107,12 @@
                                    </select>
                                 </td>
                             </tr>
-                           
+                             <tr>
+                                <th><i class="require-red">*</i>上传文件：</th>
+                                <td>
+                                    <input class="common-text required" id="title" name="file" size="50" value="" type="file">
+                                </td>
+                            </tr>
                             <tr>
                                 <th></th>
                                 <td>

@@ -40,10 +40,10 @@
                             
                             <th>ID</th>
                             <th>竞赛介绍</th>
-                            <th>竞赛公告</th>
+                          <th>竞赛公告</th>
                             <th>竞赛新闻标题</th>
                             <th>竞赛新闻内容</th>
-                            <th>报名通知</th>
+                            <th>报名通知</th> 
                             <th>添加时间</th>
                            <!--  <th>创建时间</th> -->
                             <th>操作</th>
@@ -52,16 +52,16 @@
                        <c:forEach var="n" items="${newslist}">
 	                        <tr>
 	                        <!-- 将数据库元素取出到页面 从用户实体中拿 -->
-	                            <td class="tc"><input name="id[]" value="${n.NEWS_ID}"  type="checkbox"></td>
-	                            <td><div style="height:60px; width:30px; overflow:scroll; padding:1px;">  ${n.NEWS_ID}</div> </td>
-	                             <td> <div style="height:60px;  width:180px; overflow:scroll; padding:1px;">  ${n.NEWS_INTRO } </div></td>
+	                            <td style="width:15px;" class="tc"><input name="id[]" value="${n.NEWS_ID}"  type="checkbox"></td>
+	                            <td style="width:15px;" ><div style="height:60px; width:30px; overflow:scroll; padding:1px;">  ${n.NEWS_ID}</div> </td>
+	                             <td  style="width:50%;"> <div style="height:60px;  width:100%; overflow:scroll; padding:1px;">  ${n.NEWS_INTRO } </div></td> 
 	                              <td><div style="height:60px; width:180px; overflow:scroll; padding:1px;">   ${n.NEWS_BULLETIN } </div></td>
 	                               <td> <div style="height:60px; width:180px; overflow:scroll; padding:1px;">  ${n.NEWS_TITLE }</div> </td>
 	                                <td> <div style="height:60px; width:180px; overflow:scroll; padding:1px;">  ${n.NEWS_CONTENT }</div> </td>
-	                                <td><div style="height:60px;  width:180px; overflow:scroll; padding:1px;"> ${n.NEWS_INFO }</div></td>
-	                             <td><div style="height:40px;  width:70px; overflow:hidden; padding:1px;"> ${n.NEWS_TIME }</div></td>
+	                                <td><div style="height:60px;  width:180px; overflow:scroll; padding:1px;"> ${n.NEWS_INFO }</div></td> 
+	                             <td  style="width:10%;"><div style="height:40px;  width:94px; overflow:hidden; padding:1px;"> ${n.NEWS_TIME }</div></td>
 	                          
-	                            <td>
+	                            <td >
 	                            <div style="height:60px; width:30px;  padding:1px;">
 	                                <a class="link-update" href="admin_tonewsupdate?id=${n.NEWS_ID }&cpage=${cpage}">修改</a>
 	                                <a class="link-del" href="javascript:Delete('你确定要删除${n.NEWS_ID}吗?','/electronic/manage/admin_donewsdel?id=${n.NEWS_ID }&cpage=${cpage }')">删除</a>
