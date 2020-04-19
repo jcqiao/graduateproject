@@ -34,13 +34,13 @@
          <div class="main-wrap">
         <div class="result-wrap">
             <div class="result-content">
-                <form action="/monkey/doyuserupdate" method="post" id="myform" name="myform" >
+                <form action="/electronic/doyuserupdate" method="post" id="myform" name="myform" >
                    <input type="hidden" name="userStatus" value="${user.USER_STATUS }">
                     
                     <input type="hidden" name="cpage" value="${cpage }">
                     <table class="insert-tab" width="100%">
                         <tbody>
-                            <tr>
+                            <tr style="display: none">
                                 <th><i class="require-red">*</i>用户名：</th>
                                 <td>
                                     <input class="common-text required" id="title" name="userName" size="50" value="${user.USER_ID }" type="text">
@@ -66,31 +66,14 @@
                                     <input type="radio" name="sex"  value="F" ${user.USER_SEX == 'F'?'checked':'' }>女
                                 </td>
                             </tr>
-                            <tr>
-                                <th>出生日期：</th>
-                                <td>
-                                    <input class="common-text required" id="title" name="birthday" size="50" value="${user.USER_BIRTHDAY }" type="text">
-                                </td>
-                            </tr>
-                            <tr>
-                                <th><i class="require-red">*</i>电子邮箱：</th>
-                                <td>
-                                    <input class="common-text required" id="title" name="email" size="50" value="${user.USER_EMAIL }" type="text">
-                                </td>
-                            </tr>
+                           
                             <tr>
                                 <th><i class="require-red">*</i>手机号码：</th>
                                 <td>
                                     <input class="common-text required" id="title" name="mobile" size="50" value="${user.USER_MOBILE }" type="text">
                                 </td>
                             </tr>
-                            <tr>
-                                <th><i class="require-red">*</i>送货地址：</th>
-                                <td>
-                                    <input class="common-text required" id="title" name="address" size="50" value="${user.USER_ADDRESS }" type="text">
-                                </td>
-                            </tr>
-                            
+                           
                            
                             <tr>
                                 <th></th>
