@@ -134,6 +134,7 @@ public class ELECTRONIC_USERDao {
 	}
 	//返回列表对象
 	public static ArrayList<ELECTRONIC_USER> selectAll(int cpage,int count,String keyword){
+		 System.out.println(keyword);
 		//创建列表对象
 		 ArrayList<ELECTRONIC_USER> list = new  ArrayList<ELECTRONIC_USER>();
 		 //从jbdc获取结果集
@@ -147,7 +148,9 @@ public class ELECTRONIC_USERDao {
 			 //where 字段 like
 			 if(keyword!=null) {
 				 String sql1 ="select * from ELECTRONIC_USER where USER_ID like ? or USER_NAME like ? or USER_SEX like ?  or USER_MOBILE like ? order by USER_ID desc limit ?, ?";
-				 	ps = conn.prepareStatement(sql1);
+				 System.out.println(sql1);	
+				 ps = conn.prepareStatement(sql1);
+				 	
 					// 每页5条记录 前4页20条记录 第5页应从第20条取
 				 	ps.setString(1,"%"+keyword+"%");
 				 	ps.setString(2,"%"+keyword+"%");

@@ -1,4 +1,4 @@
-package com.electronic.former.news;
+package com.electronic.servlet.news.info;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -10,18 +10,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.electronic.entity.ELECTRONIC_NEWS;
-import com.electronic.entity.ELECTRONIC_NEWS_CONTENT;
 import com.electronic.entity.ELECTRONIC_NEWS_INFO;
 import com.electronic.service.ELECTRONIC_NEWSDao;
-import com.electronic.service.ELECTRONIC_NEWS_CONTENTDao;
 import com.electronic.service.ELECTRONIC_NEWS_INFODao;
+
 
 
 /**
  * Servlet implementation class DoUserSelect
  */
-@WebServlet("/admin_donewinfo")
-public class DoNewsInfo extends HttpServlet {
+@WebServlet("/manage/admin_donewsinfoselect")
+public class DoNewsInfoSelect extends HttpServlet {
 	
    
 	/**
@@ -34,9 +33,11 @@ public class DoNewsInfo extends HttpServlet {
 		//获取用户指定页面
 		String cp = request.getParameter("cp");
 		
-		//接受用户搜索的关键字
 		String keyword = request.getParameter("keywords");
+	
 		
+		
+		System.out.print(keyword);
 		
 		if(cp!=null) {
 			cpage = Integer.parseInt(cp);
@@ -50,12 +51,14 @@ public class DoNewsInfo extends HttpServlet {
 		request.setAttribute("tsum", arr[0]);
 		request.setAttribute("tpage", arr[1]);
 		request.setAttribute("cpage", cpage);
+		
 		if(keyword!=null) {
-			//如果用户搜素就发送一个变量 然后在news.jsp的上一页下一页首页尾页中添加searchParams就可以了
+			//如果用户搜素就发送一个变量 然后在user.jsp的上一页下一页首页尾页中添加searchParams就可以了
 			request.setAttribute("searchParams", "&keywords="+keyword);
 		}
-		//普通重定向戴不进去 !!!
-		request.getRequestDispatcher("newinfo.jsp").forward(request, response);
+		//普通重定向戴不进去 
+		request.getRequestDispatcher("admin_news_info.jsp").forward(request, response);
 	}
+
 
 }

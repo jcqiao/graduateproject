@@ -1,4 +1,4 @@
-package com.electronic.former.news;
+package com.electronic.servlet.news.info;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -8,16 +8,20 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.electronic.entity.ELECTRONIC_NEWS;
+import com.electronic.entity.ELECTRONIC_NEWS_INFO;
 import com.electronic.entity.ELECTRONIC_NEWS_INTRO;
 import com.electronic.service.ELECTRONIC_NEWSDao;
+import com.electronic.service.ELECTRONIC_NEWS_INFODao;
 import com.electronic.service.ELECTRONIC_NEWS_INTRODao;
 
-
 /**
- * Servlet implementation class admin_tonewslook
+ * Servlet implementation class ToNewsUpdate
  */
-@WebServlet("/admin_tonewslook")
-public class admin_tonewslook extends HttpServlet {
+@WebServlet("/manage/admin_tonewsinfoupdate")
+public class ToNewsIntroUpdate extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+  
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -28,11 +32,16 @@ public class admin_tonewslook extends HttpServlet {
 		
 		int id = Integer.parseInt(request.getParameter("id"));
 		
-	ELECTRONIC_NEWS_INTRO news = ELECTRONIC_NEWS_INTRODao.selectById(id);
+		
+		ELECTRONIC_NEWS_INFO news = ELECTRONIC_NEWS_INFODao.selectById(id);
 		//将参数放到请求域中
 		request.setAttribute("news", news);
-//		request.setAttribute("cpage", request.getParameter("cpage"));
+	
+		request.setAttribute("cpage", request.getParameter("cpage"));
 		//重定向
-		request.getRequestDispatcher("newslook.jsp").forward(request, response);
+		request.getRequestDispatcher("admin_news_infomodify.jsp").forward(request, response);
+		
 	}
+
+	
 }

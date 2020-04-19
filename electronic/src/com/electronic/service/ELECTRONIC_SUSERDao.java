@@ -32,7 +32,7 @@ public class ELECTRONIC_SUSERDao {
 	}
 	public static int update(ELECTRONIC_SUSER u) {
 		String sql = "update ELECTRONIC_SUSER set USER_NAME=?,USER_SEX=?,USER_BIRTHDAY=DATE_FORMAT(?,'%Y-%m-%d')"
-				+ ",USER_IDENITY_CODE=?,USER_EMAIL=?,USER_MOBILE=?,USER_ADDRESS=?,USER_STATUS=? ,USER_COMPETE=?, USER_FILENAME where USER_ID=?";
+				+ ",USER_IDENITY_CODE=?,USER_EMAIL=?,USER_MOBILE=?,USER_ADDRESS=?,USER_STATUS=? ,USER_COMPETE=?, USER_FILENAME=? where USER_ID=?";
 		
 		//把页面数据拿到
 		Object[] params = {

@@ -11,7 +11,7 @@
         </div>
         <div class="search-wrap">
             <div class="search-content">
-                <form action="/electronic/manage/admin_donewsintroselect" method="get">
+                <form action="/electronic/manage/admin_donewscontentselect" method="get">
                     <table class="search-tab">
                         <tr>
                            
@@ -25,10 +25,10 @@
             </div>
         </div>
         <div class="result-wrap">
-            <form action="/electronic/manage/admin_donewsdel"  id="myform" method="post">
+            <form action="/electronic/manage/admin_donewscontentdel"  id="myform" method="post">
                 <div class="result-title">
                     <div class="result-list">
-                        <a href="admin_newsadd.jsp"><i class="icon-font"></i>新增新闻</a>
+                        <a href="admin_news_contentadd.jsp"><i class="icon-font"></i>新增新闻</a>
                         <a id="batchDel"  href="javascript:delmore('确定删除?','myform')"><i class="icon-font"></i>批量删除</a>
                       <!--   <a id="updateOrd" href="javascript:void(0)"><i class="icon-font"></i>更新排序</a> -->
                     </div>
@@ -39,11 +39,9 @@
                             <th class="tc" width="5%"><input class="allChoose" name="" onclick="selall(this)" type="checkbox"></th>
                             
                             <th>ID</th>
-                            <th>竞赛介绍</th>
-                        <!--   <th>竞赛公告</th>
-                            <th>竞赛新闻标题</th>
-                            <th>竞赛新闻内容</th>
-                            <th>报名通知</th>  -->
+                           <th>新闻标题</th>
+                       		 <th>竞赛内容</th>
+                           
                             <th>添加时间</th>
                            <!--  <th>创建时间</th> -->
                             <th>操作</th>
@@ -52,19 +50,20 @@
                        <c:forEach var="n" items="${newslist}">
 	                        <tr>
 	                        <!-- 将数据库元素取出到页面 从用户实体中拿 -->
-	                            <td style="width:15px;" class="tc"><input name="id[]" value="${n.NEWS_ID}"  type="checkbox"></td>
-	                            <td style="width:15px;" ><div style="height:60px; width:30px; overflow:scroll; padding:1px;">  ${n.NEWS_ID}</div> </td>
-	                             <td  style="width:50%;"> <div style="height:60px;  width:100%; overflow:scroll; padding:1px;">  ${n.NEWS_INTRO } </div></td> 
+	                            <td  class="tc"><input name="id[]" value="${n.NEWS_ID}"  type="checkbox"></td>
+	                            <td ><div >  ${n.NEWS_ID}</div> </td>
+	                            <td ><div >  ${n.NEWS_TITLE}</div> </td>
+	                             <td    style=" width: 70%;" > <div >  ${n.NEWS_CONTENT }</div></td> 
 	                              <%-- <td><div style="height:60px; width:180px; overflow:scroll; padding:1px;">   ${n.NEWS_BULLETIN } </div></td>
 	                               <td> <div style="height:60px; width:180px; overflow:scroll; padding:1px;">  ${n.NEWS_TITLE }</div> </td>
 	                                <td> <div style="height:60px; width:180px; overflow:scroll; padding:1px;">  ${n.NEWS_CONTENT }</div> </td>
 	                                <td><div style="height:60px;  width:180px; overflow:scroll; padding:1px;"> ${n.NEWS_INFO }</div></td>  --%>
-	                             <td  style="width:10%;"><div style="height:40px;  width:94px; overflow:hidden; padding:1px;"> ${n.NEWS_TIME }</div></td>
+	                             <td style="width:100px" ><div style="width:80px;height:25px;overflow:hidden;"> ${n.NEWS_TIME }</div></td>
 	                          
 	                            <td >
-	                            <div style="height:60px; width:30px;  padding:1px;">
-	                                <a class="link-update" href="admin_tonewsupdate?id=${n.NEWS_ID }&cpage=${cpage}">修改</a>
-	                                <a class="link-del" href="javascript:Delete('你确定要删除${n.NEWS_ID}吗?','/electronic/manage/admin_donewsdel?id=${n.NEWS_ID }&cpage=${cpage }')">删除</a>
+	                            <div >
+	                                <a class="link-update" href="admin_tonewscontentupdate?id=${n.NEWS_ID }&cpage=${cpage}">修改</a>
+	                                <a class="link-del" href="javascript:Delete('你确定要删除${n.NEWS_ID}吗?','/electronic/manage/admin_donewscontentdel?id=${n.NEWS_ID }&cpage=${cpage }')">删除</a>
 	                            </div>
 	                            </td>
 	                        </tr>
@@ -91,10 +90,10 @@
               		</script>
                     <div class="list-page">  
                     	共 ${tsum} 条记录 当前 ${cpage}/${tpage} 
-                    	<a href="admin_donewsselect?cp=1${searchParams}">首页</a>
-                    	<a href="admin_donewsselect?cp=${(cpage-1<1)?1:cpage-1}${searchParams}">上一页</a>
-                    	<a href="admin_donewsselect?cp=${(cpage+1>tpage)?tpage:cpage+1}${searchParams}">下一页</a>
-                    	<a href="admin_donewsselect?cp=${tpage}${searchParams}">尾页</a>
+                    	<a href="admin_donewsintroselect?cp=1${searchParams}">首页</a>
+                    	<a href="admin_donewsintroselect?cp=${(cpage-1<1)?1:cpage-1}${searchParams}">上一页</a>
+                    	<a href="admin_donewsintroselect?cp=${(cpage+1>tpage)?tpage:cpage+1}${searchParams}">下一页</a>
+                    	<a href="admin_donewsintroselect?cp=${tpage}${searchParams}">尾页</a>
                     </div>
                 </div>
             </form>

@@ -1,4 +1,4 @@
-package com.electronic.servlet.suser;
+package com.electronic.servlet.news;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -9,52 +9,50 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.electronic.service.ELECTRONIC_SUSERDao;
-import com.jspsmart.upload.File;
-import com.jspsmart.upload.Files;
-import com.jspsmart.upload.Request;
-import com.jspsmart.upload.SmartUpload;
-import com.jspsmart.upload.SmartUploadException;
-
+import com.electronic.service.ELECTRONIC_NEWSDao;
+import com.electronic.service.ELECTRONIC_NEWS_INTRODao;
+import com.electronic.service.ELECTRONIC_USERDao;
 
 /**
- * Servlet implementation class DoSuserDel
+ * Servlet implementation class DoNewsDel
  */
-@WebServlet("/manage/admin_dosuserdel")
-public class DoSuserDel extends HttpServlet {
+@WebServlet("/manage/admin_donewsintrodel")
+public class DoNewsIntroDel extends HttpServlet {
+	
+
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-		 String id = request.getParameter("id");
-		System.out.println(id);
+		request.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html; charset=utf-8");
+		String id = request.getParameter("id");
 		
-		int count = ELECTRONIC_SUSERDao.del(id);
+		int count = ELECTRONIC_NEWS_INTRODao.del(id);
 		//成功失败重定向到哪里
 				if(count > 0) {
-					response.sendRedirect("admin_dosuserselect?cp=" + request.getParameter("cpage"));
+					response.sendRedirect("admin_donewsintroselect?cp=" + request.getParameter("cpage"));
 				} else {
 					PrintWriter out = response.getWriter();
 					out.write("<script>");
-					out.write("alert('报名用户删除失败');");
-					out.write("location.href='manage/admin_dosuserselect?cp="+request.getParameter("cpage")+"'");
+					out.write("alert('新闻删除失败');");
+					out.write("location.href='manage/admin_donewsintroselect?cp="+request.getParameter("cpage")+"'");
 					out.write("</script>");
 				}
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("dsjfk");
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=utf-8");
 		// 每一个复选框都叫id[]全部获取到存入数组  数组应该是values
 		String ids[] = request.getParameterValues("id[]");
 		for(int i=0;i<ids.length;i++) {
-			int count = ELECTRONIC_SUSERDao.del(ids[i]);
+			int count = ELECTRONIC_NEWS_INTRODao.del(ids[i]);
 		}
-		
 		//成功重定向到哪里
 				
-		response.sendRedirect("/electronic/manage/admin_dosuserselect" );
+		response.sendRedirect("/electronic/manage/admin_donewsintroselect" );
+	}
 	}
 
-}
+
+

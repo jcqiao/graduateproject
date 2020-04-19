@@ -10,8 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.electronic.entity.ELECTRONIC_NEWS;
-
+import com.electronic.entity.ELECTRONIC_NEWS_INTRO;
 import com.electronic.service.ELECTRONIC_NEWSDao;
+import com.electronic.service.ELECTRONIC_NEWS_INTRODao;
 
 
 
@@ -41,10 +42,10 @@ public class DoNewsSelect extends HttpServlet {
 		if(cp!=null) {
 			cpage = Integer.parseInt(cp);
 		}
-		int arr[] = ELECTRONIC_NEWSDao.totalPage(count,keyword);
+		int arr[] = ELECTRONIC_NEWS_INTRODao.totalPage(count,keyword);
 		//selectall返回所有用户对象 使用列表接收 也就是用户实体类型
 		//分页跟查询都在selectall执行 查询在全选择完进行查询 where 字段 %keywoerd%
-		ArrayList<ELECTRONIC_NEWS>  list = ELECTRONIC_NEWSDao.selectAll(cpage,count,keyword);
+		ArrayList<ELECTRONIC_NEWS_INTRO>  list = ELECTRONIC_NEWS_INTRODao.selectAll(cpage,count,keyword);
 		//放到请求对象域里
 		request.setAttribute("newslist", list);
 		request.setAttribute("tsum", arr[0]);
@@ -56,7 +57,7 @@ public class DoNewsSelect extends HttpServlet {
 			request.setAttribute("searchParams", "&keywords="+keyword);
 		}
 		//普通重定向戴不进去 
-		request.getRequestDispatcher("admin_news.jsp").forward(request, response);
+		request.getRequestDispatcher("admin_news_intro.jsp").forward(request, response);
 	}
 //	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //		int cpage = 1; //当前页

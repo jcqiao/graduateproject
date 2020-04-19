@@ -10,7 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.electronic.entity.ELECTRONIC_NEWS;
+import com.electronic.entity.ELECTRONIC_NEWS_CONTENT;
 import com.electronic.service.ELECTRONIC_NEWSDao;
+import com.electronic.service.ELECTRONIC_NEWS_CONTENTDao;
 
 
 /**
@@ -37,10 +39,10 @@ public class DoNewsContent extends HttpServlet {
 		if(cp!=null) {
 			cpage = Integer.parseInt(cp);
 		}
-		int arr[] = ELECTRONIC_NEWSDao.totalPage(count,keyword);
+		int arr[] = ELECTRONIC_NEWS_CONTENTDao.totalPage(count,keyword);
 		//selectall返回所有用户对象 使用列表接收 也就是用户实体类型
 		//分页跟查询都在selectall执行 查询在全选择完进行查询 where 字段 %keywoerd%
-		ArrayList<ELECTRONIC_NEWS>  list = ELECTRONIC_NEWSDao.selectAll(cpage,count,keyword);
+		ArrayList<ELECTRONIC_NEWS_CONTENT>  list = ELECTRONIC_NEWS_CONTENTDao.selectAll(cpage,count,keyword);
 		//放到请求对象域里
 		request.setAttribute("newslist", list);
 		request.setAttribute("tsum", arr[0]);

@@ -53,8 +53,10 @@
                         <li><a href="/electronic/manage/admin_douserselect"><i class="icon-font">&#xe008;</i>用户注册管理</a></li>
                         <li><a href="/electronic/manage/admin_dosuserselect"><i class="icon-font">&#xe005;</i>报名管理</a></li>
                         
-                        <li><a href="/electronic/manage/admin_donewsselect"><i class="icon-font">&#xe052;</i>新闻管理</a></li>
-                       
+                        <li><a href="/electronic/manage/admin_donewsintroselect"><i class="icon-font">&#xe052;</i>新闻简介管理</a></li>
+                        <li><a href="/electronic/manage/admin_donewsbulletinselect"><i class="icon-font">&#xe052;</i>新闻公告管理</a></li>
+                          <li><a href="/electronic/manage/admin_donewscontentselect"><i class="icon-font">&#xe052;</i>新闻内容管理</a></li>
+                        <li><a href="/electronic/manage/admin_donewsinfoselect"><i class="icon-font">&#xe052;</i>新闻报名须知管理</a></li>
                     </ul>
                 </li>
                 

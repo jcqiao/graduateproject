@@ -15,7 +15,7 @@
                     <input type="hidden" name="cpage" value="${cpage }">
                     <table class="insert-tab" width="100%">
                         <tbody>
-                            <tr>
+                            <tr style="display:none">
                                 <th><i class="require-red">*</i>用户名：</th>
                                 <td>
                                     <input class="common-text required" id="title" name="userName" size="50" value="${user.USER_ID }" type="text">

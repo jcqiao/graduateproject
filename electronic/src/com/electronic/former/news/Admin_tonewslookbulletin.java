@@ -8,7 +8,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.electronic.entity.ELECTRONIC_NEWS;
+import com.electronic.entity.ELECTRONIC_NEWS_BULLETIN;
 import com.electronic.service.ELECTRONIC_NEWSDao;
+import com.electronic.service.ELECTRONIC_NEWS_BULLETINDao;
 
 /**
  * Servlet implementation class Admin_tonewslookbulletin
@@ -21,7 +23,7 @@ public class Admin_tonewslookbulletin extends HttpServlet {
 		
 		int id = Integer.parseInt(request.getParameter("id"));
 		
-		ELECTRONIC_NEWS news = ELECTRONIC_NEWSDao.selectById(id);
+		ELECTRONIC_NEWS_BULLETIN news = ELECTRONIC_NEWS_BULLETINDao.selectById(id);
 		//将参数放到请求域中
 		request.setAttribute("news", news);
 //		request.setAttribute("cpage", request.getParameter("cpage"));
