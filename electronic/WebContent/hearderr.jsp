@@ -5,6 +5,7 @@
     <div class="wrapper clearfix">
         <div class="clearfix" id="top"><h1 class="fl"><a href="index.html"><img src="img/logo.png"/></a></h1>
             <div class="fr clearfix" id="top1">
+           <p class="fl"> <input type="text" class="filter" id="filter" style="border:1px solid #000"></p>
             <!--实现登录后不显示登录注册按钮  -->
             <p class="fl"><c:if test="${isLogin != 1}">
             	<a href="login.jsp" id="login">登录</a><a href="#" id="reg">注册</a>

@@ -321,3 +321,6 @@ a.ad {
 .flex-pauseplay span {
     text-transform: capitalize;
 }
+
+li.disact{display: block;}
+li.disnone{display: none;}

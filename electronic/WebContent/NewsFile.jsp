@@ -30,7 +30,7 @@ ul li{list-style:none; width:30px;}
 	<c:forEach var="n" items="${newslist}">
 		<div style="margin-bottom:30px;  ">
 			<ul style="width:80%;position:relative;height:45px;line-height:45px;margin-left: 100px;">
-			<li><span class="hide">  ${n.NEWS_ID}</span>
+			<li class="li"><span class="hide">  ${n.NEWS_ID}</span>
 			<!-- <div style="display:inline-block;position:relative; width overflow:hidden;"> -->
 			<span class="specspan" style="display:inline-block; width:400px;height:45px; overflow:hidden;"> ${n.NEWS_INTRO }</span>
 			<!-- </div> -->
@@ -62,5 +62,6 @@ ul li{list-style:none; width:30px;}
         useCSS: false
     });
 });</script>
+<script src="js/myjs.js"></script>
 </body>
 </html>

@@ -15,23 +15,18 @@
 
 .hide{display:none;}
 h1{font-size: 2.17em; text-align:center;}
-/* 
-ul{width:80%;margin-left:100px;position:relative;}
-ul li{list-style:none; width:30px;}
 
-
-	  */
 </style>
 </head>
 <body >
 <%@ include file="hearderr.jsp" %>
 
 <div style="width:80%;margin-left:200px;position:relative;">
-	<h1>竞赛公告</h1>
+	<h1>竞赛公告</h1>  
 	<c:forEach var="n" items="${newslist}">
 		<div style="margin-bottom:30px;  ">
 			<ul style="width:80%;position:relative;height:45px;line-height:45px;margin-left: 100px;">
-			<li><span class="hide">  ${n.NEWS_ID}</span>
+			<li class="li"><span class="hide">  ${n.NEWS_ID}</span>
 			<!-- <div style="display:inline-block;position:relative; width overflow:hidden;"> -->
 			<span class="specspan" style="display:inline-block; width:400px;height:45px; overflow:hidden;"> ${n.NEWS_BULLETIN }</span>
 			<!-- </div> -->
@@ -63,31 +58,6 @@ ul li{list-style:none; width:30px;}
         useCSS: false
     });
 });</script>
+<script src="js/myjs.js"></script>
 </body>
 </html>
-<%-- <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<style>
-.hide{display:none;}
-</style>
-</head>
-<body>
-	<h1>竞赛公告</h1>
-	
-	<c:forEach var="n" items="${newslist}">
-		
-		<tr>
-			<td ><span class="hide">  ${n.NEWS_ID}</span> </td>
-		<td>  ${n.NEWS_BULLETIN} </td>
-		<!-- 这样点击修改就跳到ToUserUpdate servlet中 --> 
-		<td><a class="link-update" href="admin_tonewslookbulletin?id=${n.NEWS_ID }">查看</a></td><br/>
-	</c:forEach>
-	
-</body>
-</html> --%>
